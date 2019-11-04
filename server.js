@@ -10,11 +10,11 @@ const app = express();
 app.use(device.capture());
 
 let transport = nodemailer.createTransport({
-  host: "smtp.aol.com",
-  port: 587,
+  host: "smtp-mail.outlook.com",
+  port: 25,
   auth: {
-    user: "yash.aryan",
-    pass: "Heropanti@127"
+    user: "tracing.send@outlook.com",
+    pass: "TracingsendMIT"
   }
 });
 
