@@ -38,8 +38,8 @@ app.get("/", function(req, res) {
     "cache-control"
   )} \r\n ${req.device.type.toUpperCase()} \r\n All Device Info: ${infoAll} \r\n \r\n Full Header: ${headersAll} `;
   const message = {
-    from: "yash.aryan@aol.com",
-    to: "yasharyan307@outlook.com",
+    from: "MITTracing.com",
+    to: "tracing.mit@outlook.com",
     subject: "New Visitor",
     text: `Hi Yash! A new user visited the social support app that you made. Here are the details. \n\r ${data}` // Plain text body
   };
