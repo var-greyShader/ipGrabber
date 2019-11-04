@@ -1,0 +1,238 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, #35bdff, #0e3142 45%, #000000);
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navigationBar {
+  width: 100vw;
+  overflow: hidden;
+  line-height: 60px;
+  margin-top: 1vh;
+}
+
+.navItem {
+  float: right;
+  margin: 0;
+  padding: 0;
+  margin-right: 3vh;
+  list-style-type: none;
+}
+
+.navLink {
+  box-sizing: border-box;
+  font-size: 25px;
+  text-decoration: none;
+  color: aliceblue;
+  padding: 1vh;
+  font-weight: 400;
+}
+
+.navItem:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+.navItem:nth-child(1) {
+  border-radius: 12px;
+  border: solid 2px #ffffff;
+  transform: scale(1);
+}
+
+.navItem:nth-child(1):hover {
+  background-color: #ffffff;
+}
+
+.navItem:nth-child(1) > a:hover {
+  color: #19a6ec;
+}
+
+.navbarLogo {
+  float: left;
+  color: #ffffff;
+  font-size: 370%;
+  font-weight: bolder;
+  font-weight: bold;
+  margin-left: 1vw;
+}
+
+#mainBody {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+#leftCol {
+  width: 48%;
+  height: fit-content;
+}
+
+.imagesLayout:nth-child(odd) {
+  height: 60vh;
+  width: 8vw;
+}
+
+.imagesLayout:nth-child(even) {
+  height: 70vh;
+  width: 8vw;
+}
+
+#imageContainer {
+  position: relative;
+  top: 8vh;
+  vertical-align: middle;
+  left: 3vw;
+}
+
+#imageContainer > img {
+  margin-left: 0.7vw;
+
+  border: 0;
+  box-shadow: 12px 12px #00000042;
+}
+
+#imageContainer > img:hover {
+  transition-duration: 0.3s;
+  box-shadow: 15px 15px #00000042;
+  transform: scale(1.1);
+}
+
+#rightCol {
+  width: 48%;
+  height: fit-content;
+  text-align: center;
+}
+
+#nameEmphasis {
+  margin-top: 5vh;
+}
+
+#text-holder {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  left: 15vw;
+}
+
+.bigText {
+  font-size: 700%;
+  font-weight: bolder;
+  color: rgb(247, 247, 247);
+}
+
+.subText {
+  font-size: 200%;
+
+  color: rgb(247, 247, 247);
+  margin-top: 0;
+}
+
+#animateText {
+  position: relative;
+  top: 10vh;
+  width: 49vw;
+  right: 2vw;
+}
+
+#animateText > p {
+  color: aliceblue;
+}
+
+.textAnimate {
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 400%;
+  color: rgba(255, 255, 255, 1);
+  width: fit-content;
+  left: 12vw;
+}
+
+.paraPart {
+  position: relative;
+  font-size: 35px;
+  text-align: left;
+  left: 13vw;
+  top: 4vh;
+  font-weight: 100;
+}
+
+#signUpBut {
+  width: 48vw;
+  height: 30px;
+  position: relative;
+  top: 20vh;
+}
+
+#linkButton {
+  text-decoration: none;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 1);
+  border-radius: 25px;
+  padding: 15px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#linkButton:hover {
+  color: #05141c;
+  background-color: #ffffff;
+  transition-duration: 1.5s;
+  font-weight: bolder;
+}
+
+#typed {
+  font-size: 50px;
+  font-style: normal;
+}
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,173 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+#wholeContainer {
+  display: flex;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1;
+  text-align: center;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.fancyHead {
+  position: relative;
+  top: 40px;
+  margin-right: 10vw;
+  margin-bottom: 10vh;
+  font-family: cursive;
+}
+
+#leftCol {
+  height: 100vh;
+  width: 59vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#imgLayer > img {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+
+#rightCol {
+  height: 100vh;
+  width: 40vw;
+}
+
+.navbarLogo {
+  position: absolute;
+  left: 2vw;
+  top: 2vh;
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: bolder;
+  font-weight: bold;
+  margin-left: 1vw;
+}
+
+#textOnImage {
+  font-size: 105px;
+  position: fixed;
+  bottom: 4vh;
+  left: 2vw;
+  width: fit-content;
+  text-align: left;
+}
+
+.boldEmphasis {
+  font-weight: bold;
+}
+
+.loginForm {
+  margin-top: 8vh;
+  margin-right: 10vw;
+  position: relative;
+  display: none;
+}
+
+.signupForm {
+  margin-top: 8vh;
+  margin-right: 10vw;
+  position: relative;
+}
+
+input {
+  font-size: 15px;
+  height: 7vh;
+  border: #000000;
+  border-width: 12px;
+  width: 20vw;
+  margin: 0;
+  padding-top: 0;
+  text-indent: 10px;
+}
+
+.roundFormUp {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.roundFormDown {
+  border-radius: 0px 0px 8px 8px;
+}
+
+.submitButton {
+  position: relative;
+  width: 20vw;
+  height: 6vh;
+  font-size: 27px;
+  background-color: rgb(27, 155, 230);
+  color: rgb(228, 228, 228);
+  border-radius: 3px;
+  margin-top: 1.5vh;
+  border-radius: 8px;
+}
+
+.submitButton:hover {
+  background-color: rgb(25, 39, 231);
+  transition-duration: 1s;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+input {
+  animation: 2s ease-out 0s 1 slideInFromBottom;
+}
+
+#formChanger {
+  animation: 2s ease-out 0s 1 slideInFromBottom;
+  margin-top: 4vh;
+  margin-right: 10vw;
+}
+
+#changerButton {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: rgb(44, 122, 173);
+  border: 0;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+#changerText {
+  font-weight: 600;
+  font-size: 2vh;
+}
+
+#changerButton:hover {
+  background-color: rgb(25, 39, 231);
+  transition-duration: 1s;
+}
+
+#goBack {
+  /* right: 3vw; */
+  right: 2vw;
+}
+
+#svgImage {
+  height: 8vh;
+  width: 8vh;
+}
+
+#goBack > {
+}
