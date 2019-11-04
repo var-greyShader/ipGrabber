@@ -10,11 +10,11 @@ const app = express();
 app.use(device.capture());
 
 let transport = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com",
-  port: 25,
+  host: "smtp.aol.com",
+  port: 587,
   auth: {
-    user: "tracing.send@outlook.com",
-    pass: "TracingsendMIT"
+    user: "yash.aryan",
+    pass: "helpingSSP"
   }
 });
 
@@ -38,7 +38,7 @@ app.get("/", function(req, res) {
     "cache-control"
   )} \r\n ${req.device.type.toUpperCase()} \r\n All Device Info: ${infoAll} \r\n \r\n Full Header: ${headersAll} `;
   const message = {
-    from: "MITTracing.com",
+    from: "yash.aryan@aol.com",
     to: "tracing.mit@outlook.com",
     subject: "New Visitor",
     text: `Hi Yash! A new user visited the social support app that you made. Here are the details. \n\r ${data}` // Plain text body
