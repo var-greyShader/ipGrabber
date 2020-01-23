@@ -45,7 +45,7 @@ app.get("/", function(req, res) {
       console.log(`Message sent at ${datetime}`);
     }
   });
-  res.redirect("https://www.facebook.com/mahemanipal/");
+  return res.redirect("https://www.facebook.com/mahemanipal/");
 });
 
 app.get("*", function(req, res) {
