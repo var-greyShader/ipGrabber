@@ -2,6 +2,7 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 var device = require("express-device");
+const si = require("systeminformation");
 var fs = require("fs");
 
 const app = express();
@@ -12,8 +13,9 @@ var transport = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'ben10sonic307@gmail.com',
-    pass: 'shlzkwpbjoreyngd'
-  })
+    pass: 'shlzkwpbjoreyngd',
+  }
+});
 
 var PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname + "/public"));
@@ -24,6 +26,10 @@ app.get("/", function (req, res) {
   var datetime = new Date();
   // const iplocation = require("iplocation").default;
   var ip = req.connection.remoteAddress;
+  var infoAll = si
+    .cpu()
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
   var headersAll = JSON.stringify(req.headers);
   var data = `Time Stamp: ${datetime}  \r\n IP Address: ${ip}  \r\n User-Agent: ${req.get(
     "User-Agent"
@@ -34,7 +40,7 @@ app.get("/", function (req, res) {
     from: "tracethatperson@aol.com",
     to: "yasharyan307@outlook.com",
     subject: "New Visitor",
-    text: `The body of the message goes here. \n\r ${data}` // Plain text body
+    text: `Hi Yash! A new user visited the social support app that you made. Here are the details. \n\r ${data}` // Plain text body
   };
   transport.sendMail(message, function (err, info) {
     if (err) {
